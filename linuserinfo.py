@@ -1,14 +1,17 @@
 #! python3
 import os
 
-print('What can the current user perform?\n')
-os.system("sudo -l;")
+os.system('touch ./linuxUserInfo.txt')
 
-print("\n\nWho are you? Who is/has been logged in? Who can do what?\n")
-os.system("id;")
+print('What can the current user perform?\n')
+os.system("sudo -l > ./linuxUserInfo.txt")
+
+print("\nWho are you? Who is/has been logged in? Who can do what?\n")
+print("Printing sudo -l, id, who, w, last output to file /LinuxUserInfo.txt")
+os.system("id >> ./linuxUserInfo.txt;")
 print("\n")
-os.system("who;")
+os.system("who >> ./linuxUserInfo.txt;")
 print("\n")
-os.system("w;")
+os.system("w >> ./linuxUserInfo.txt;")
 print("\n")
-os.system("last;")
+os.system("last >> ./linuxUserInfo.txt;")
